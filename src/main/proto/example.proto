@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "ru.hse.spring.jdbc.template.example.springbootgrpcexample";
+option java_multiple_files = true;
+
+message CreateGreetingRequest {
+  string name = 1;
+}
+
+message CreateGreetingResponse {
+  string greeting = 1;
+}
+
+service GreetingService {
+  rpc CreateGreeting(CreateGreetingRequest) returns (CreateGreetingResponse);
+}
