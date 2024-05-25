@@ -5,7 +5,6 @@ import net.devh.boot.grpc.server.service.GrpcService;
 
 @GrpcService
 public class GreetingService extends GreetingServiceGrpc.GreetingServiceImplBase {
-
     @Override
     public void createGreeting(CreateGreetingRequest request, StreamObserver<CreateGreetingResponse> responseObserver) {
         CreateGreetingResponse createGreetingResponse =
